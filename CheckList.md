@@ -1,7 +1,7 @@
 # CheckList
 
 ## Individual Challenges
-- [ ] Access Admin Panel
+- [x] Access Admin Panel
 - [x] Add User Input To Cookie
 - [x] Assign User Input To Inner Html
 - [x] Authenticate User
