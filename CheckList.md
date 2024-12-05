@@ -11,9 +11,9 @@
 - [ ] Create Tcp Client
 - [ ] Create Web Request
 - [ ] Default Authentication
-- [ ] Delete Directory
-- [ ] Delete File
-- [ ] Delete Order
+- [x] Delete Directory
+- [x] Delete File
+- [x] Delete Order
 - [ ] Download File
 - [ ] Embed User Input In Script
 - [ ] Encrypt With DES
