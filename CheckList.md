@@ -25,7 +25,7 @@
 - [ ] Get User By Username
 - [ ] Get User Data
 - [ ] Hardcode Username In Session
-- [ ] Hash With MD5
+- [x] Hash With MD5
 - [ ] HTML Injection.html
 - [ ] Insecure Base64 Encryption
 - [ ] Insecurely Change Directory Access Control
