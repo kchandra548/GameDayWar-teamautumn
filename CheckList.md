@@ -3,8 +3,8 @@
 ## Individual Challenges
 - [ ] Access Admin Panel
 - [x] Add User Input To Cookie
-- [ ] Assign User Input To Inner Html
-- [ ] Authenticate User
+- [x] Assign User Input To Inner Html
+- [x] Authenticate User
 - [ ] Authenticate With Hardcoded Password
 - [ ] Connect With Hardcoded Connection String
 - [ ] Create Auth Cookie
