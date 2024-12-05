@@ -1,6 +1,10 @@
 public void UseHardcodedApiKey()
 {
-    string apiKey = "abcdef12345"; // Insecure: Hardcoded API key
+    string apiKey = Environment.GetEnvironmentVariable("API_KEY"); // Secure: Retrieve API key from environment variable
+    if (string.IsNullOrEmpty(apiKey))
+    {
+        throw new InvalidOperationException("API key is not set in environment variables.");
+    }
     Console.WriteLine("Using API key: " + apiKey);
 
     // Simulate API usage
