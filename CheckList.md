@@ -59,7 +59,7 @@
 - [ ] Use Hardcoded Secret Key
 - [ ] Use Hardcoded Windows Identity
 - [ ] Use Static Token In Cookie
-- [ ] Wrap User Input In Div
+- [x] Wrap User Input In Div
 - [x] Write Exception To File
 
 ## Team Challenges
