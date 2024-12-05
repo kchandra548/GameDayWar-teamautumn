@@ -5,7 +5,7 @@
 - [x] Add User Input To Cookie
 - [x] Assign User Input To Inner Html
 - [x] Authenticate User
-- [ ] Authenticate With Hardcoded Password
+- [x] Authenticate With Hardcoded Password
 - [ ] Connect With Hardcoded Connection String
 - [ ] Create Auth Cookie
 - [ ] Create Tcp Client
