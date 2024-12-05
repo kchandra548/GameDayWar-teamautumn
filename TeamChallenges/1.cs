@@ -9,22 +9,20 @@ namespace VulnerableWebAPI.Controllers
     public class InsecureController : ApiController
     {
         // Hardcoded Database Connection String (Vulnerability #3)
-        private readonly string connectionString = "Server=myServer;Database=SensitiveDB;User Id=admin;Password=admin123;";
-
-        // Insecure endpoint to fetch user data
+        private readonly string connectionString = System.Configuration.ConfigurationManager.ConnectionStrings["SecureDB"].ConnectionString;
         [HttpGet]
         [Route("getUserData")]
         public IHttpActionResult GetUserData(string userId)
         {
             try
             {
-                // SQL Injection Vulnerability (#1)
-                string query = $"SELECT * FROM Users WHERE UserId = '{userId}'";
-
                 using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
+                    // Use parameterized query to prevent SQL injection
+                    string query = "SELECT * FROM Users WHERE UserId = @UserId";
                     SqlCommand cmd = new SqlCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@UserId", userId);
                     SqlDataReader reader = cmd.ExecuteReader();
 
                     if (reader.Read())
@@ -36,28 +34,40 @@ namespace VulnerableWebAPI.Controllers
                             Email = reader["Email"]
                         });
                     }
-                }
 
-                return NotFound();
+                    return NotFound();
+                }
             }
             catch (Exception ex)
             {
-                // Improper Error Handling (#4)
-                return InternalServerError(ex);
+                // Log the exception and return a generic error message
+                // LogException(ex); // Implement a logging mechanism
+                return InternalServerError(new Exception("An error occurred while processing your request."));
             }
         }
 
-        // Insecure endpoint to access files
+        // Secure endpoint to access files
         [HttpGet]
         [Route("getFile")]
         public IHttpActionResult GetFile(string fileName)
         {
             try
             {
-                // Insecure Direct Object Reference (#2)
-                string filePath = "C:\\SecureFiles\\" + fileName;
+                // Validate and sanitize the file name
+                if (string.IsNullOrWhiteSpace(fileName) || fileName.IndexOfAny(Path.GetInvalidFileNameChars()) >= 0)
+                {
+                    return BadRequest("Invalid file name.");
+                }
 
-                // Unrestricted File Access (#5)
+                string secureDirectory = "C:\\SecureFiles\\";
+                string filePath = Path.Combine(secureDirectory, fileName);
+
+                // Ensure the file is within the secure directory
+                if (!filePath.StartsWith(secureDirectory))
+                {
+                    return BadRequest("Invalid file path.");
+                }
+
                 if (File.Exists(filePath))
                 {
                     string content = File.ReadAllText(filePath);
@@ -68,21 +78,22 @@ namespace VulnerableWebAPI.Controllers
             }
             catch (Exception ex)
             {
-                return InternalServerError(ex);
+                // Log the exception and return a generic error message
+                // LogException(ex); // Implement a logging mechanism
+                return InternalServerError(new Exception("An error occurred while processing your request."));
             }
         }
 
-        // Insecure debug endpoint
+        // Secure debug endpoint
         [HttpGet]
         [Route("debug")]
         public IHttpActionResult Debug()
         {
-            // Insecure Configuration (#6)
+            // Avoid exposing sensitive information
             return Ok(new
             {
-                Environment = "Debug",
-                MachineName = Environment.MachineName,
-                Uptime = Environment.TickCount
+                Environment = "Debug"
+                // Remove sensitive information
             });
         }
     }

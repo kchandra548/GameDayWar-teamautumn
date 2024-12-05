@@ -1,31 +1,31 @@
 # CheckList
 
 ## Individual Challenges
-- [ ] Access Admin Panel
-- [ ] Add User Input To Cookie
-- [ ] Assign User Input To Inner Html
-- [ ] Authenticate User
-- [ ] Authenticate With Hardcoded Password
+- [x] Access Admin Panel
+- [x] Add User Input To Cookie
+- [x] Assign User Input To Inner Html
+- [x] Authenticate User
+- [x] Authenticate With Hardcoded Password
 - [ ] Connect With Hardcoded Connection String
 - [ ] Create Auth Cookie
-- [ ] Create Tcp Client
+- [x] Create Tcp Client
 - [ ] Create Web Request
 - [ ] Default Authentication
-- [ ] Delete Directory
-- [ ] Delete File
-- [ ] Delete Order
-- [ ] Download File
+- [x] Delete Directory
+- [x] Delete File
+- [x] Delete Order
+- [x] Download File
 - [ ] Embed User Input In Script
-- [ ] Encrypt With DES
+- [x] Encrypt With DES
 - [ ] Encrypt With Hardcoded AES Key
 - [ ] Encrypt With Hardcoded Key
 - [ ] Execute Script
-- [ ] Generate Jwt With Hardcoded Secret
+- [x] Generate Jwt With Hardcoded Secret
 - [ ] Get Product By Name
 - [ ] Get User By Username
 - [ ] Get User Data
 - [ ] Hardcode Username In Session
-- [ ] Hash With MD5
+- [x] Hash With MD5
 - [ ] HTML Injection.html
 - [ ] Insecure Base64 Encryption
 - [ ] Insecurely Change Directory Access Control
@@ -48,7 +48,7 @@
 - [ ] Render Input To Response
 - [ ] Run Command
 - [ ] Run Power Shell Script
-- [ ] Save File
+- [x] Save File
 - [ ] Send Email
 - [ ] Send Sensitive Data To Untrusted Url
 - [ ] Set Unlimited Session Timeout
@@ -58,12 +58,12 @@
 - [ ] Use Hardcoded Api Key
 - [ ] Use Hardcoded Secret Key
 - [ ] Use Hardcoded Windows Identity
-- [ ] Use Static Token In Cookie
-- [ ] Wrap User Input In Div
-- [ ] Write Exception To File
+- [x] Use Static Token In Cookie
+- [x] Wrap User Input In Div
+- [x] Write Exception To File
 
 ## Team Challenges
-- [ ] 1
+- [x] 1
 - [ ] 2
 - [ ] 3
 - [ ] 4

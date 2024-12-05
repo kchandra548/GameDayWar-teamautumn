@@ -1,7 +1,6 @@
-public void AuthenticateWithHardcodedPassword()
+public void AuthenticateWithPassword(string password)
 {
-    string password = "P@ssword!"; // Insecure: Hardcoded password
-    Console.WriteLine("Authenticating with hardcoded password.");
+    Console.WriteLine("Authenticating with provided password.");
 
     // Simulate authentication
     if (password == "P@ssword!")
