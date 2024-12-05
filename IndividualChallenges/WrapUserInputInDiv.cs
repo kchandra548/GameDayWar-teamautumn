@@ -1,6 +1,10 @@
+using System;
+using System.Web;
+
 public void WrapUserInputInDiv(string userInput)
 {
-    // Insecure: Wraps user input directly into a <div> without encoding
-    var content = "<div>" + userInput + "</div>";
+    // Secure: HTML-encode the user input to prevent XSS attacks
+    var encodedInput = HttpUtility.HtmlEncode(userInput);
+    var content = "<div>" + encodedInput + "</div>";
     Console.WriteLine("Generated content: " + content);
 }
