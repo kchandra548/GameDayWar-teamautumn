@@ -58,7 +58,7 @@
 - [ ] Use Hardcoded Api Key
 - [ ] Use Hardcoded Secret Key
 - [ ] Use Hardcoded Windows Identity
-- [ ] Use Static Token In Cookie
+- [x] Use Static Token In Cookie
 - [x] Wrap User Input In Div
 - [x] Write Exception To File
 
