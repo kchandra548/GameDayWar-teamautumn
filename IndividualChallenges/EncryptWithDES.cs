@@ -1,12 +1,17 @@
-public void EncryptWithDES(byte[] data, byte[] key, byte[] iv)
-{
-    var des = DES.Create(); // Insecure encryption algorithm
-    des.Key = key;          // Must be 8 bytes
-    des.IV = iv;            // Must be 8 bytes
+using System;
+using System.Security.Cryptography;
 
-    using (var encryptor = des.CreateEncryptor())
+public void EncryptWithAES(byte[] data, byte[] key, byte[] iv)
+{
+    using (var aes = Aes.Create()) // Secure encryption algorithm
     {
-        var encryptedData = encryptor.TransformFinalBlock(data, 0, data.Length);
-        Console.WriteLine($"Encrypted Data (DES): {Convert.ToBase64String(encryptedData)}");
+        aes.Key = key; // Must be 16, 24, or 32 bytes
+        aes.IV = iv;   // Must be 16 bytes
+
+        using (var encryptor = aes.CreateEncryptor())
+        {
+            var encryptedData = encryptor.TransformFinalBlock(data, 0, data.Length);
+            Console.WriteLine($"Encrypted Data (AES): {Convert.ToBase64String(encryptedData)}");
+        }
     }
 }
