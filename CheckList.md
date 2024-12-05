@@ -16,7 +16,7 @@
 - [x] Delete Order
 - [x] Download File
 - [ ] Embed User Input In Script
-- [ ] Encrypt With DES
+- [x] Encrypt With DES
 - [ ] Encrypt With Hardcoded AES Key
 - [ ] Encrypt With Hardcoded Key
 - [ ] Execute Script
