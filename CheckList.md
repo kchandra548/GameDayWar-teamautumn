@@ -60,7 +60,7 @@
 - [ ] Use Hardcoded Windows Identity
 - [ ] Use Static Token In Cookie
 - [ ] Wrap User Input In Div
-- [ ] Write Exception To File
+- [x] Write Exception To File
 
 ## Team Challenges
 - [x] 1
