@@ -8,7 +8,7 @@
 - [x] Authenticate With Hardcoded Password
 - [ ] Connect With Hardcoded Connection String
 - [ ] Create Auth Cookie
-- [ ] Create Tcp Client
+- [x] Create Tcp Client
 - [ ] Create Web Request
 - [ ] Default Authentication
 - [x] Delete Directory
