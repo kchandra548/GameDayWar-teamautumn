@@ -14,7 +14,7 @@
 - [x] Delete Directory
 - [x] Delete File
 - [x] Delete Order
-- [ ] Download File
+- [x] Download File
 - [ ] Embed User Input In Script
 - [ ] Encrypt With DES
 - [ ] Encrypt With Hardcoded AES Key
