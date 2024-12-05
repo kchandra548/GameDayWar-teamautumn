@@ -20,7 +20,7 @@
 - [ ] Encrypt With Hardcoded AES Key
 - [ ] Encrypt With Hardcoded Key
 - [ ] Execute Script
-- [ ] Generate Jwt With Hardcoded Secret
+- [x] Generate Jwt With Hardcoded Secret
 - [ ] Get Product By Name
 - [ ] Get User By Username
 - [ ] Get User Data
