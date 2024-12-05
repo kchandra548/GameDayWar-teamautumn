@@ -1,3 +1,6 @@
+using System.Web;
+using System.Text.RegularExpressions;
+
 public void AddUserInputToCookie(string userInput)
 {
     // Validate and sanitize user input before adding to cookies

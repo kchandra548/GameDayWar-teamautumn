@@ -1,11 +1,16 @@
-public void AccessAdminPanel(string username)
+public class AccessAdminPanelClass
 {
-    if (username == "admin") // Hardcoded username for admin
+    private const string AdminUsername = "admin";
+
+    public void AccessAdminPanel(string username)
     {
-        Console.WriteLine("Access to Admin Panel Granted!");
-    }
-    else
-    {
-        Console.WriteLine("Access Denied.");
+        if (username == AdminUsername) // Use constant for admin username
+        {
+            Console.WriteLine("Access to Admin Panel Granted!");
+        }
+        else
+        {
+            Console.WriteLine("Access Denied.");
+        }
     }
 }
